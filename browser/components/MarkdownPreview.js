@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import Markdown from 'browser/lib/markdown'
+import Markdown from 'browser/lib/markdown2'
 import _ from 'lodash'
 import CodeMirror from 'codemirror'
 import 'codemirror-mode-elixir'
@@ -399,10 +399,7 @@ export default class MarkdownPreview extends React.Component {
       el.removeEventListener('click', this.linkClickHandler)
     })
 
-    const { theme, indentSize, showCopyNotification, storagePath, noteKey } = this.props
-    let { value, codeBlockTheme } = this.props
-
-    this.refs.root.contentWindow.document.body.setAttribute('data-theme', theme)
+    let value = this.props.value
 
     const codeBlocks = value.match(/(```)(.|[\n])*?(```)/g)
     if (codeBlocks !== null) {
@@ -410,9 +407,18 @@ export default class MarkdownPreview extends React.Component {
         value = value.replace(codeBlock, htmlTextHelper.encodeEntities(codeBlock))
       })
     }
-    let renderedHTML = this.markdown.render(value)
-    attachmentManagement.migrateAttachments(renderedHTML, storagePath, noteKey)
-    this.refs.root.contentWindow.document.body.innerHTML = attachmentManagement.fixLocalURLS(renderedHTML, storagePath)
+    this.markdown.render(value, content => {
+      this.renderHTML(content)
+    })
+  }
+
+  renderHTML (content) {
+    const { theme, indentSize, showCopyNotification, storagePath, noteKey } = this.props
+    let codeBlockTheme = this.props.codeBlockTheme
+          // attachmentManagement.migrateAttachments(renderedHTML, storagePath, noteKey)
+    // this.refs.root.contentWindow.document.body.innerHTML = attachmentManagement.fixLocalURLS(renderedHTML, storagePath)
+    this.refs.root.contentWindow.document.body.setAttribute('data-theme', theme)
+    this.refs.root.contentWindow.document.body.innerHTML = content
 
     _.forEach(this.refs.root.contentWindow.document.querySelectorAll('input[type="checkbox"]'), (el) => {
       el.addEventListener('click', this.checkboxClickHandler)
