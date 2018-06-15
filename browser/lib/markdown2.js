@@ -18,7 +18,8 @@ class Markdown {
     this.md.process(content)
            .then(
              function (file) {
-               cb(file)
+               cb(String(file))
+               console.log(String(file))
              },
              function (error) {
                console.error(error)

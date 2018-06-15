@@ -399,14 +399,8 @@ export default class MarkdownPreview extends React.Component {
       el.removeEventListener('click', this.linkClickHandler)
     })
 
-    let value = this.props.value
+    const value = this.props.value
 
-    const codeBlocks = value.match(/(```)(.|[\n])*?(```)/g)
-    if (codeBlocks !== null) {
-      codeBlocks.forEach((codeBlock) => {
-        value = value.replace(codeBlock, htmlTextHelper.encodeEntities(codeBlock))
-      })
-    }
     this.markdown.render(value, content => {
       this.renderHTML(content)
     })
@@ -419,87 +413,6 @@ export default class MarkdownPreview extends React.Component {
     // this.refs.root.contentWindow.document.body.innerHTML = attachmentManagement.fixLocalURLS(renderedHTML, storagePath)
     this.refs.root.contentWindow.document.body.setAttribute('data-theme', theme)
     this.refs.root.contentWindow.document.body.innerHTML = content
-
-    _.forEach(this.refs.root.contentWindow.document.querySelectorAll('input[type="checkbox"]'), (el) => {
-      el.addEventListener('click', this.checkboxClickHandler)
-    })
-
-    _.forEach(this.refs.root.contentWindow.document.querySelectorAll('a'), (el) => {
-      this.fixDecodedURI(el)
-      el.addEventListener('click', this.linkClickHandler)
-    })
-
-    codeBlockTheme = consts.THEMES.some((_theme) => _theme === codeBlockTheme)
-      ? codeBlockTheme
-      : 'default'
-
-    _.forEach(this.refs.root.contentWindow.document.querySelectorAll('.code code'), (el) => {
-      let syntax = CodeMirror.findModeByName(convertModeName(el.className))
-      if (syntax == null) syntax = CodeMirror.findModeByName('Plain Text')
-      CodeMirror.requireMode(syntax.mode, () => {
-        const content = htmlTextHelper.decodeEntities(el.innerHTML)
-        const copyIcon = document.createElement('i')
-        copyIcon.innerHTML = '<button class="clipboardButton"><svg width="13" height="13" viewBox="0 0 1792 1792" ><path d="M768 1664h896v-640h-416q-40 0-68-28t-28-68v-416h-384v1152zm256-1440v-64q0-13-9.5-22.5t-22.5-9.5h-704q-13 0-22.5 9.5t-9.5 22.5v64q0 13 9.5 22.5t22.5 9.5h704q13 0 22.5-9.5t9.5-22.5zm256 672h299l-299-299v299zm512 128v672q0 40-28 68t-68 28h-960q-40 0-68-28t-28-68v-160h-544q-40 0-68-28t-28-68v-1344q0-40 28-68t68-28h1088q40 0 68 28t28 68v328q21 13 36 28l408 408q28 28 48 76t20 88z"/></svg></button>'
-        copyIcon.onclick = (e) => {
-          copy(content)
-          if (showCopyNotification) {
-            this.notify('Saved to Clipboard!', {
-              body: 'Paste it wherever you want!',
-              silent: true
-            })
-          }
-        }
-        el.parentNode.appendChild(copyIcon)
-        el.innerHTML = ''
-        if (codeBlockTheme.indexOf('solarized') === 0) {
-          const [refThema, color] = codeBlockTheme.split(' ')
-          el.parentNode.className += ` cm-s-${refThema} cm-s-${color}`
-        } else {
-          el.parentNode.className += ` cm-s-${codeBlockTheme}`
-        }
-        CodeMirror.runMode(content, syntax.mime, el, {
-          tabSize: indentSize
-        })
-      })
-    })
-    const opts = {}
-    // if (this.props.theme === 'dark') {
-    //   opts['font-color'] = '#DDD'
-    //   opts['line-color'] = '#DDD'
-    //   opts['element-color'] = '#DDD'
-    //   opts['fill'] = '#3A404C'
-    // }
-    _.forEach(this.refs.root.contentWindow.document.querySelectorAll('.flowchart'), (el) => {
-      Raphael.setWindow(this.getWindow())
-      try {
-        const diagram = flowchart.parse(htmlTextHelper.decodeEntities(el.innerHTML))
-        el.innerHTML = ''
-        diagram.drawSVG(el, opts)
-        _.forEach(el.querySelectorAll('a'), (el) => {
-          el.addEventListener('click', this.linkClickHandler)
-        })
-      } catch (e) {
-        console.error(e)
-        el.className = 'flowchart-error'
-        el.innerHTML = 'Flowchart parse error: ' + e.message
-      }
-    })
-
-    _.forEach(this.refs.root.contentWindow.document.querySelectorAll('.sequence'), (el) => {
-      Raphael.setWindow(this.getWindow())
-      try {
-        const diagram = SequenceDiagram.parse(htmlTextHelper.decodeEntities(el.innerHTML))
-        el.innerHTML = ''
-        diagram.drawSVG(el, {theme: 'simple'})
-        _.forEach(el.querySelectorAll('a'), (el) => {
-          el.addEventListener('click', this.linkClickHandler)
-        })
-      } catch (e) {
-        console.error(e)
-        el.className = 'sequence-error'
-        el.innerHTML = 'Sequence diagram parse error: ' + e.message
-      }
-    })
   }
 
   focus () {
