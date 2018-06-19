@@ -49,6 +49,7 @@
   },
   "homepage": "https://boostnote.io",
   "dependencies": {
+    "@enyaxu/rehype-stringify": "^3.0.1",
     "@rokt33r/markdown-it-math": "^4.0.1",
     "@rokt33r/season": "^5.3.0",
     "aws-sdk": "^2.48.0",

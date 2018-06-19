@@ -58,6 +58,29 @@
   dependencies:
     arrify "^1.0.1"
 
+"@enyaxu/hast-util-to-html@^3.1.1":
+  version "3.1.1"
+  resolved "http://registry.npm.taobao.org/@enyaxu/hast-util-to-html/download/@enyaxu/hast-util-to-html-3.1.1.tgz#08a642117608d30c541baadcb8fe1d0256f39795"
+  dependencies:
+    ccount "^1.0.0"
+    comma-separated-tokens "^1.0.1"
+    hast-util-is-element "^1.0.0"
+    hast-util-whitespace "^1.0.0"
+    html-void-elements "^1.0.0"
+    kebab-case "^1.0.0"
+    property-information "^3.1.0"
+    space-separated-tokens "^1.0.0"
+    stringify-entities "^1.0.1"
+    unist-util-is "^2.0.0"
+    xtend "^4.0.1"
+
+"@enyaxu/rehype-stringify@^3.0.1":
+  version "3.0.1"
+  resolved "http://registry.npm.taobao.org/@enyaxu/rehype-stringify/download/@enyaxu/rehype-stringify-3.0.1.tgz#a83a01e6636f4947e5bed1fcc92c74782cc6f21e"
+  dependencies:
+    "@enyaxu/hast-util-to-html" "^3.1.1"
+    xtend "^4.0.1"
+
 "@ladjs/time-require@^0.1.4":
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/@ladjs/time-require/-/time-require-0.1.4.tgz#5c615d75fd647ddd5de9cf6922649558856b21a1"
