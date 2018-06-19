@@ -2,13 +2,23 @@ import unified from 'unified'
 import remarkParse from 'remark-parse'
 import remark2rehype from 'remark-rehype'
 import rehypeStringify from 'rehype-stringify'
+import rehypeHighlight from 'rehype-highlight'
+import remarkMath from 'remark-math'
+import rehypeKatex from 'rehype-katex'
 import _ from 'lodash'
 
 class Markdown {
   constructor (options = {}) {
     this.md = unified()
                   .use(remarkParse)
+                  .use(remarkMath)
                   .use(remark2rehype)
+                  .use(rehypeKatex, {
+                    throwOnError: true,
+                    errorColor: '#FF0000',
+                    inlineDoubleDisplay: true
+                  })
+                  .use(rehypeHighlight)
                   .use(rehypeStringify)
     window.md = this.md
   }

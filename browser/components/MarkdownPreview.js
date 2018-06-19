@@ -29,7 +29,8 @@ const appPath = 'file://' + (process.env.NODE_ENV === 'production'
   : path.resolve())
 const CSS_FILES = [
   `${appPath}/node_modules/katex/dist/katex.min.css`,
-  `${appPath}/node_modules/codemirror/lib/codemirror.css`
+  `${appPath}/node_modules/codemirror/lib/codemirror.css`,
+  `${appPath}/node_modules/highlight.js/styles/default.css`
 ]
 
 function buildStyle (fontFamily, fontSize, codeBlockFontFamily, lineNumber, scrollPastEnd, theme, allowCustomCSS, customCSS) {
