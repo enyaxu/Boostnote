@@ -5,8 +5,6 @@ import rehypeStringify from '@enyaxu/rehype-stringify'
 import rehypeHighlight from 'rehype-highlight'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
-import rehypeFlowChart from 'rehype-flowchart'
-
 import _ from 'lodash'
 
 class Markdown {

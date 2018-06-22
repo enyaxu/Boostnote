@@ -1385,10 +1385,6 @@ browser-resolve@^1.11.2:
   dependencies:
     resolve "1.1.7"
 
-browser-split@0.0.0:
-  version "0.0.0"
-  resolved "http://registry.npm.taobao.org/browser-split/download/browser-split-0.0.0.tgz#41419caef769755929dd518967d3eec0a6262771"
-
 browserify-aes@0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/browserify-aes/-/browserify-aes-0.4.0.tgz#067149b668df31c4b58533e02d01e806d8608e2c"
@@ -1673,12 +1669,6 @@ clap@^1.0.9:
   resolved "https://registry.yarnpkg.com/clap/-/clap-1.2.3.tgz#4f36745b32008492557f46412d66d50cb99bce51"
   dependencies:
     chalk "^1.1.3"
-
-class-list@~0.1.0, class-list@~0.1.1:
-  version "0.1.1"
-  resolved "http://registry.npm.taobao.org/class-list/download/class-list-0.1.1.tgz#9b9745192c4179b5da0a0d7633658e3c70d796cb"
-  dependencies:
-    indexof "0.0.1"
 
 class-utils@^0.3.5:
   version "0.3.6"
@@ -2323,7 +2313,7 @@ deep-extend@^0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/deep-extend/-/deep-extend-0.6.0.tgz#c4fa7c95404a17a9c3e8ca7e1537312b736330ac"
 
-deep-is@~0.1.2, deep-is@~0.1.3:
+deep-is@~0.1.3:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/deep-is/-/deep-is-0.1.3.tgz#b369d6fb5dbc13eecf524f91b070feedc357cf34"
 
@@ -2827,16 +2817,6 @@ escodegen@^1.6.1, escodegen@^1.9.0:
   optionalDependencies:
     source-map "~0.6.1"
 
-escodegen@~1.3.2:
-  version "1.3.3"
-  resolved "http://registry.npm.taobao.org/escodegen/download/escodegen-1.3.3.tgz#f024016f5a88e046fd12005055e939802e6c5f23"
-  dependencies:
-    esprima "~1.1.1"
-    estraverse "~1.5.0"
-    esutils "~1.0.0"
-  optionalDependencies:
-    source-map "~0.1.33"
-
 escope@^3.6.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/escope/-/escope-3.6.0.tgz#e01975e812781a163a6dadfdd80398dc64c889c3"
@@ -2845,12 +2825,6 @@ escope@^3.6.0:
     es6-weak-map "^2.0.1"
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
-
-escope@~1.0.1:
-  version "1.0.3"
-  resolved "http://registry.npm.taobao.org/escope/download/escope-1.0.3.tgz#759dce8496c4248fec2d0caaf4108bcf3f1a7f5d"
-  dependencies:
-    estraverse "^2.0.0"
 
 eslint-config-standard-jsx@3.2.0:
   version "3.2.0"
@@ -2971,19 +2945,6 @@ eslint@~3.10.2:
     text-table "~0.2.0"
     user-home "^2.0.0"
 
-esmangle@^1.0.1:
-  version "1.0.1"
-  resolved "http://registry.npm.taobao.org/esmangle/download/esmangle-1.0.1.tgz#d9bb37b8f8eafbf4e6d4ed6b7aa2956abbd3c4c2"
-  dependencies:
-    escodegen "~1.3.2"
-    escope "~1.0.1"
-    esprima "~1.1.1"
-    esshorten "~1.1.0"
-    estraverse "~1.5.0"
-    esutils "~ 1.0.0"
-    optionator "~0.3.0"
-    source-map "~0.1.33"
-
 espower-location-detector@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/espower-location-detector/-/espower-location-detector-1.0.0.tgz#a17b7ecc59d30e179e2bef73fb4137704cb331b5"
@@ -3016,10 +2977,6 @@ esprima@^4.0.0:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/esprima/-/esprima-1.0.4.tgz#9f557e08fc3b4d26ece9dd34f8fbf476b62585ad"
 
-esprima@~1.1.1:
-  version "1.1.1"
-  resolved "http://registry.npm.taobao.org/esprima/download/esprima-1.1.1.tgz#5b6f1547f4d102e670e140c509be6771d6aeb549"
-
 espurify@^1.6.0:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/espurify/-/espurify-1.8.0.tgz#270d8046e4e47e923d75bc8a87357c7112ca8485"
@@ -3038,37 +2995,13 @@ esrecurse@^4.1.0:
   dependencies:
     estraverse "^4.1.0"
 
-esshorten@~1.1.0:
-  version "1.1.1"
-  resolved "http://registry.npm.taobao.org/esshorten/download/esshorten-1.1.1.tgz#174f96b7cc267e46872d814e7db7c290bdff61a9"
-  dependencies:
-    escope "~1.0.1"
-    estraverse "~4.1.1"
-    esutils "~2.0.2"
-
-estraverse@^2.0.0:
-  version "2.0.0"
-  resolved "http://registry.npm.taobao.org/estraverse/download/estraverse-2.0.0.tgz#5ae46963243600206674ccb24a09e16674fcdca1"
-
 estraverse@^4.0.0, estraverse@^4.1.0, estraverse@^4.1.1, estraverse@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/estraverse/-/estraverse-4.2.0.tgz#0dee3fed31fcd469618ce7342099fc1afa0bdb13"
 
-estraverse@~1.5.0:
-  version "1.5.1"
-  resolved "http://registry.npm.taobao.org/estraverse/download/estraverse-1.5.1.tgz#867a3e8e58a9f84618afb6c2ddbcd916b7cbaf71"
-
-estraverse@~4.1.1:
-  version "4.1.1"
-  resolved "http://registry.npm.taobao.org/estraverse/download/estraverse-4.1.1.tgz#f6caca728933a850ef90661d0e17982ba47111a2"
-
-esutils@^2.0.2, esutils@~2.0.2:
+esutils@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/esutils/-/esutils-2.0.2.tgz#0abf4f1caa5bcb1f7a9d8acc6dea4faaa04bac9b"
-
-"esutils@~ 1.0.0", esutils@~1.0.0:
-  version "1.0.0"
-  resolved "http://registry.npm.taobao.org/esutils/download/esutils-1.0.0.tgz#8151d358e20c8acc7fb745e7472c0025fe496570"
 
 etag@~1.8.1:
   version "1.8.1"
@@ -3280,10 +3213,6 @@ fast-json-stable-stringify@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/fast-json-stable-stringify/-/fast-json-stable-stringify-2.0.0.tgz#d5142c0caee6b1189f87d3a76111064f86c8bbf2"
 
-fast-levenshtein@~1.0.0:
-  version "1.0.7"
-  resolved "http://registry.npm.taobao.org/fast-levenshtein/download/fast-levenshtein-1.0.7.tgz#0178dcdee023b92905193af0959e8a7639cfdcb9"
-
 fast-levenshtein@~2.0.4:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz#3d8a5c66883a16a30ca8643e851f19baa7797917"
@@ -3460,12 +3389,6 @@ flat-cache@^1.2.1:
 flatten@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/flatten/-/flatten-1.0.2.tgz#dae46a9d78fbe25292258cc1e780a41d95c03782"
-
-flowchart.js@^1.11.2:
-  version "1.11.2"
-  resolved "http://registry.npm.taobao.org/flowchart.js/download/flowchart.js-1.11.2.tgz#ac50bc31ed5d67033cd6a50e9531d29a7102573d"
-  dependencies:
-    raphael "2.2.7"
 
 flowchart.js@^1.6.5:
   version "1.11.0"
@@ -4102,7 +4025,7 @@ hast-util-to-html@^3.0.0:
     unist-util-is "^2.0.0"
     xtend "^4.0.1"
 
-hast-util-to-string@^1.0.0, hast-util-to-string@^1.0.1:
+hast-util-to-string@^1.0.0:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/hast-util-to-string/download/hast-util-to-string-1.0.1.tgz#b28055cdca012d3c8fd048757c8483d0de0d002c"
 
@@ -4185,12 +4108,6 @@ hosted-git-info@^2.1.4:
 html-comment-regex@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/html-comment-regex/-/html-comment-regex-1.1.1.tgz#668b93776eaae55ebde8f3ad464b307a4963625e"
-
-html-element@^2.0.0:
-  version "2.2.0"
-  resolved "http://registry.npm.taobao.org/html-element/download/html-element-2.2.0.tgz#c3c1ff88c261db74d0af6391eef90c346f900730"
-  dependencies:
-    class-list "~0.1.1"
 
 html-encoding-sniffer@^1.0.1, html-encoding-sniffer@^1.0.2:
   version "1.0.2"
@@ -4294,14 +4211,6 @@ hullabaloo-config-manager@^1.1.0:
 humanize-plus@^1.8.1:
   version "1.8.2"
   resolved "https://registry.yarnpkg.com/humanize-plus/-/humanize-plus-1.8.2.tgz#a65b34459ad6367adbb3707a82a3c9f916167030"
-
-hyperscript@^2.0.2:
-  version "2.0.2"
-  resolved "http://registry.npm.taobao.org/hyperscript/download/hyperscript-2.0.2.tgz#3839cba45554bdfe27bb81c2142d1684f8135af5"
-  dependencies:
-    browser-split "0.0.0"
-    class-list "~0.1.0"
-    html-element "^2.0.0"
 
 i18n-2@^0.7.2:
   version "0.7.2"
@@ -5467,13 +5376,6 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-levn@~0.2.4:
-  version "0.2.5"
-  resolved "http://registry.npm.taobao.org/levn/download/levn-0.2.5.tgz#ba8d339d0ca4a610e3a3f145b9caf48807155054"
-  dependencies:
-    prelude-ls "~1.1.0"
-    type-check "~0.3.1"
-
 linkify-it@~1.2.0, linkify-it@~1.2.2:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/linkify-it/-/linkify-it-1.2.4.tgz#0773526c317c8fd13bd534ee1d180ff88abf881a"
@@ -6499,17 +6401,6 @@ optionator@^0.8.1, optionator@^0.8.2:
     type-check "~0.3.2"
     wordwrap "~1.0.0"
 
-optionator@~0.3.0:
-  version "0.3.0"
-  resolved "http://registry.npm.taobao.org/optionator/download/optionator-0.3.0.tgz#9715a8b5f5e7586cff06c8249e039cd7364d3f54"
-  dependencies:
-    deep-is "~0.1.2"
-    fast-levenshtein "~1.0.0"
-    levn "~0.2.4"
-    prelude-ls "~1.1.0"
-    type-check "~0.3.1"
-    wordwrap "~0.0.2"
-
 original@>=0.0.5:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/original/-/original-1.0.1.tgz#b0a53ff42ba997a8c9cd1fb5daaeb42b9d693190"
@@ -7048,7 +6939,7 @@ postcss@^6.0.14:
     source-map "^0.6.1"
     supports-color "^5.4.0"
 
-prelude-ls@~1.1.0, prelude-ls@~1.1.2:
+prelude-ls@~1.1.2:
   version "1.1.2"
   resolved "http://registry.npm.taobao.org/prelude-ls/download/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
 
@@ -7591,16 +7482,6 @@ rehype-document@^2.0.1:
     doctype "^2.0.0"
     hastscript "^3.0.0"
     unist-builder "^1.0.1"
-
-rehype-flowchart@^1.0.0:
-  version "1.0.1"
-  resolved "http://registry.npm.taobao.org/rehype-flowchart/download/rehype-flowchart-1.0.1.tgz#844c13538d31f3171e81f8052d0cbc306071a1be"
-  dependencies:
-    esmangle "^1.0.1"
-    flowchart.js "^1.11.2"
-    hast-util-is-element "^1.0.0"
-    hast-util-to-string "^1.0.1"
-    hyperscript "^2.0.2"
 
 rehype-highlight@^2.1.0:
   version "2.1.0"
@@ -8229,7 +8110,7 @@ source-map-url@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/source-map-url/-/source-map-url-0.4.0.tgz#3e935d7ddd73631b97659956d55128e87b5084a3"
 
-source-map@0.1.x, source-map@~0.1.33:
+source-map@0.1.x:
   version "0.1.43"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.1.43.tgz#c24bc146ca517c1471f5dacbe2571b2b7f9e3346"
   dependencies:
@@ -8873,7 +8754,7 @@ tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
 
-type-check@~0.3.1, type-check@~0.3.2:
+type-check@~0.3.2:
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/type-check/-/type-check-0.3.2.tgz#5884cab512cf1d355e3fb784f30804b2b520db72"
   dependencies:
