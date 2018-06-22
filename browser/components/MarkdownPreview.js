@@ -410,10 +410,31 @@ export default class MarkdownPreview extends React.Component {
   renderHTML (content) {
     const { theme, indentSize, showCopyNotification, storagePath, noteKey } = this.props
     let codeBlockTheme = this.props.codeBlockTheme
+    const document = this.refs.root.contentWindow.document
           // attachmentManagement.migrateAttachments(renderedHTML, storagePath, noteKey)
     // this.refs.root.contentWindow.document.body.innerHTML = attachmentManagement.fixLocalURLS(renderedHTML, storagePath)
-    this.refs.root.contentWindow.document.body.setAttribute('data-theme', theme)
-    this.refs.root.contentWindow.document.body.innerHTML = content
+    document.body.setAttribute('data-theme', theme)
+    document.body.innerHTML = content
+
+    var opts = {}
+    _.forEach(document.querySelectorAll('.language-flowchart'), (el) => {
+      Raphael.setWindow(this.getWindow())
+      const container = el.parentNode
+      container.className = 'flowchart'
+      try {
+        const diagram = flowchart.parse(htmlTextHelper.decodeEntities(el.innerHTML))
+        container.innerHTML = ''
+        diagram.drawSVG(container, opts)
+        _.forEach(el.querySelectorAll('a'), (el) => {
+          el.addEventListener('click', this.linkClickHandler)
+        })
+      } catch (e) {
+        console.error(e)
+        container.className = 'flowchart-error'
+        container.outerHTML = 'Flowchart parse error: ' + e.message
+      }
+      console.log(el)
+    })
   }
 
   focus () {

@@ -189,7 +189,7 @@ alphanum-sort@^1.0.1, alphanum-sort@^1.0.2:
 
 amdefine@>=0.0.4:
   version "1.0.1"
-  resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
+  resolved "http://registry.npm.taobao.org/amdefine/download/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
 ansi-align@^2.0.0:
   version "2.0.0"
@@ -1385,6 +1385,10 @@ browser-resolve@^1.11.2:
   dependencies:
     resolve "1.1.7"
 
+browser-split@0.0.0:
+  version "0.0.0"
+  resolved "http://registry.npm.taobao.org/browser-split/download/browser-split-0.0.0.tgz#41419caef769755929dd518967d3eec0a6262771"
+
 browserify-aes@0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/browserify-aes/-/browserify-aes-0.4.0.tgz#067149b668df31c4b58533e02d01e806d8608e2c"
@@ -1669,6 +1673,12 @@ clap@^1.0.9:
   resolved "https://registry.yarnpkg.com/clap/-/clap-1.2.3.tgz#4f36745b32008492557f46412d66d50cb99bce51"
   dependencies:
     chalk "^1.1.3"
+
+class-list@~0.1.0, class-list@~0.1.1:
+  version "0.1.1"
+  resolved "http://registry.npm.taobao.org/class-list/download/class-list-0.1.1.tgz#9b9745192c4179b5da0a0d7633658e3c70d796cb"
+  dependencies:
+    indexof "0.0.1"
 
 class-utils@^0.3.5:
   version "0.3.6"
@@ -2323,7 +2333,7 @@ default-require-extensions@^1.0.0:
   dependencies:
     strip-bom "^2.0.0"
 
-define-properties@^1.1.2:
+define-properties@^1.1.1, define-properties@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/define-properties/-/define-properties-1.1.2.tgz#83a73f2fea569898fb737193c8f873caf6d45c94"
   dependencies:
@@ -3066,7 +3076,7 @@ etag@~1.8.1:
 
 eve-raphael@0.5.0:
   version "0.5.0"
-  resolved "https://registry.yarnpkg.com/eve-raphael/-/eve-raphael-0.5.0.tgz#17c754b792beef3fa6684d79cf5a47c63c4cda30"
+  resolved "http://registry.npm.taobao.org/eve-raphael/download/eve-raphael-0.5.0.tgz#17c754b792beef3fa6684d79cf5a47c63c4cda30"
 
 "eve@git://github.com/adobe-webplatform/eve.git#eef80ed":
   version "0.4.1"
@@ -4033,6 +4043,18 @@ has@^1.0.1:
   dependencies:
     function-bind "^1.0.2"
 
+hast-to-hyperscript@^4.0.0:
+  version "4.0.0"
+  resolved "http://registry.npm.taobao.org/hast-to-hyperscript/download/hast-to-hyperscript-4.0.0.tgz#3eb25483ec72a8e9a71e4b1ad7eb8f7c86f755db"
+  dependencies:
+    comma-separated-tokens "^1.0.0"
+    is-nan "^1.2.1"
+    kebab-case "^1.0.0"
+    property-information "^3.0.0"
+    space-separated-tokens "^1.0.0"
+    trim "0.0.1"
+    unist-util-is "^2.0.0"
+
 hast-util-from-parse5@^1.0.0:
   version "1.1.0"
   resolved "http://registry.npm.taobao.org/hast-util-from-parse5/download/hast-util-from-parse5-1.1.0.tgz#359cc339dc8ccf1dfaca41915ad63fd546130acd"
@@ -4043,9 +4065,22 @@ hast-util-from-parse5@^1.0.0:
     property-information "^3.1.0"
     vfile-location "^2.0.0"
 
+hast-util-from-parse5@^2.0.1:
+  version "2.1.0"
+  resolved "http://registry.npm.taobao.org/hast-util-from-parse5/download/hast-util-from-parse5-2.1.0.tgz#f6123d83d3689630b097e13e430d16d9d1bd8884"
+  dependencies:
+    camelcase "^3.0.0"
+    hastscript "^3.0.0"
+    property-information "^3.1.0"
+    vfile-location "^2.0.0"
+
+hast-util-from-string@^1.0.1:
+  version "1.0.1"
+  resolved "http://registry.npm.taobao.org/hast-util-from-string/download/hast-util-from-string-1.0.1.tgz#f522812c36bb8ec447528548d126767db311fad1"
+
 hast-util-is-element@^1.0.0:
-  version "1.0.0"
-  resolved "http://registry.npm.taobao.org/hast-util-is-element/download/hast-util-is-element-1.0.0.tgz#3f7216978b2ae14d98749878782675f33be3ce00"
+  version "1.0.1"
+  resolved "http://registry.npm.taobao.org/hast-util-is-element/download/hast-util-is-element-1.0.1.tgz#c76e8aafbdb6e5c83265bf50324e2f2e024eb12a"
 
 hast-util-parse-selector@^2.0.0:
   version "2.1.0"
@@ -4151,6 +4186,12 @@ html-comment-regex@^1.1.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/html-comment-regex/-/html-comment-regex-1.1.1.tgz#668b93776eaae55ebde8f3ad464b307a4963625e"
 
+html-element@^2.0.0:
+  version "2.2.0"
+  resolved "http://registry.npm.taobao.org/html-element/download/html-element-2.2.0.tgz#c3c1ff88c261db74d0af6391eef90c346f900730"
+  dependencies:
+    class-list "~0.1.1"
+
 html-encoding-sniffer@^1.0.1, html-encoding-sniffer@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/html-encoding-sniffer/-/html-encoding-sniffer-1.0.2.tgz#e70d84b94da53aa375e11fe3a351be6642ca46f8"
@@ -4253,6 +4294,14 @@ hullabaloo-config-manager@^1.1.0:
 humanize-plus@^1.8.1:
   version "1.8.2"
   resolved "https://registry.yarnpkg.com/humanize-plus/-/humanize-plus-1.8.2.tgz#a65b34459ad6367adbb3707a82a3c9f916167030"
+
+hyperscript@^2.0.2:
+  version "2.0.2"
+  resolved "http://registry.npm.taobao.org/hyperscript/download/hyperscript-2.0.2.tgz#3839cba45554bdfe27bb81c2142d1684f8135af5"
+  dependencies:
+    browser-split "0.0.0"
+    class-list "~0.1.0"
+    html-element "^2.0.0"
 
 i18n-2@^0.7.2:
   version "0.7.2"
@@ -4603,6 +4652,12 @@ is-my-json-valid@^2.10.0, is-my-json-valid@^2.12.0:
     is-my-ip-valid "^1.0.0"
     jsonpointer "^4.0.0"
     xtend "^4.0.0"
+
+is-nan@^1.2.1:
+  version "1.2.1"
+  resolved "http://registry.npm.taobao.org/is-nan/download/is-nan-1.2.1.tgz#9faf65b6fb6db24b7f5c0628475ea71f988401e2"
+  dependencies:
+    define-properties "^1.1.1"
 
 is-npm@^1.0.0:
   version "1.0.0"
@@ -6583,7 +6638,7 @@ parse-ms@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/parse-ms/-/parse-ms-1.0.1.tgz#56346d4749d78f23430ca0c713850aef91aa361d"
 
-parse5@4.0.0:
+parse5@4.0.0, parse5@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-4.0.0.tgz#6d78656e3da8d78b4ec0b906f7c08ef1dfe3f608"
 
@@ -6995,7 +7050,7 @@ postcss@^6.0.14:
 
 prelude-ls@~1.1.0, prelude-ls@~1.1.2:
   version "1.1.2"
-  resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
+  resolved "http://registry.npm.taobao.org/prelude-ls/download/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
 
 prepend-http@^1.0.0, prepend-http@^1.0.1:
   version "1.0.4"
@@ -7162,7 +7217,7 @@ range-parser@^1.0.3, range-parser@~1.2.0:
 
 raphael@2.2.7, raphael@^2.2.7:
   version "2.2.7"
-  resolved "https://registry.yarnpkg.com/raphael/-/raphael-2.2.7.tgz#231b19141f8d086986d8faceb66f8b562ee2c810"
+  resolved "http://registry.npm.taobao.org/raphael/download/raphael-2.2.7.tgz#231b19141f8d086986d8faceb66f8b562ee2c810"
   dependencies:
     eve-raphael "0.5.0"
 
@@ -7538,13 +7593,14 @@ rehype-document@^2.0.1:
     unist-builder "^1.0.1"
 
 rehype-flowchart@^1.0.0:
-  version "1.0.0"
-  resolved "http://registry.npm.taobao.org/rehype-flowchart/download/rehype-flowchart-1.0.0.tgz#635624fe8ce3571d77a1c2e5fd575f13a4ad6e49"
+  version "1.0.1"
+  resolved "http://registry.npm.taobao.org/rehype-flowchart/download/rehype-flowchart-1.0.1.tgz#844c13538d31f3171e81f8052d0cbc306071a1be"
   dependencies:
     esmangle "^1.0.1"
     flowchart.js "^1.11.2"
     hast-util-is-element "^1.0.0"
     hast-util-to-string "^1.0.1"
+    hyperscript "^2.0.2"
 
 rehype-highlight@^2.1.0:
   version "2.1.0"
@@ -7570,6 +7626,14 @@ rehype-parse@^3.0.0:
   dependencies:
     hast-util-from-parse5 "^1.0.0"
     parse5 "^2.1.5"
+    xtend "^4.0.1"
+
+rehype-parse@^4.1.0:
+  version "4.1.0"
+  resolved "http://registry.npm.taobao.org/rehype-parse/download/rehype-parse-4.1.0.tgz#bb46fcc213205527bc4a0d362f1906c8b1ff0814"
+  dependencies:
+    hast-util-from-parse5 "^2.0.1"
+    parse5 "^4.0.0"
     xtend "^4.0.1"
 
 rehype-stringify@^3.0.0:
@@ -9375,7 +9439,7 @@ wordwrap@0.0.2:
 
 wordwrap@~0.0.2:
   version "0.0.3"
-  resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.3.tgz#a3d5da6cd5c0bc0008d37234bbaf1bed63059107"
+  resolved "http://registry.npm.taobao.org/wordwrap/download/wordwrap-0.0.3.tgz#a3d5da6cd5c0bc0008d37234bbaf1bed63059107"
 
 wordwrap@~1.0.0:
   version "1.0.0"

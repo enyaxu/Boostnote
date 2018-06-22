@@ -20,7 +20,6 @@ class Markdown {
                     errorColor: '#FF0000',
                     inlineDoubleDisplay: true
                   })
-                  .use(rehypeFlowChart)
                   .use(rehypeHighlight, {
                     ignoreMissing: true
                   })
@@ -34,7 +33,7 @@ class Markdown {
            .then(
              function (file) {
                cb(String(file))
-               console.log(String(file))
+              //  console.log(String(file))
              },
              function (error) {
                console.error(error)
