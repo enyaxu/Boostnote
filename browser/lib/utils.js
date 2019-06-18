@@ -8,7 +8,7 @@ export function lastFindInArray (array, callback) {
 
 export function escapeHtmlCharacters (
   html,
-  opt = { detectCodeBlock: false, skipSingleQuote: false }
+  opt = { detectCodeBlock: false, skipSingleQuote: false, skipCodeBlock: true }
 ) {
   const matchHtmlRegExp = /["'&<>]/g
   const matchCodeBlockRegExp = /```/g
@@ -98,7 +98,7 @@ export function escapeHtmlCharacters (
           break
         }
       }
-      if (!escapedStr) {
+      if (!opt.skipCodeBlock || !escapedStr) {
         // this & char is not a part of an escaped string
         html = replaceAt(html, current.index, '&amp;')
       }

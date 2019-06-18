@@ -19,7 +19,7 @@ module.exports = function sanitizePlugin (md, options) {
         // escapeHtmlCharacters has better performance
         state.tokens[tokenIdx].content = escapeHtmlCharacters(
           state.tokens[tokenIdx].content,
-          { skipSingleQuote: true }
+          {skipSingleQuote: true, skipCodeBlock: false}
         )
       }
       if (state.tokens[tokenIdx].type === 'inline') {

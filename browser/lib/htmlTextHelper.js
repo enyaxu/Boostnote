@@ -10,11 +10,11 @@
 export function decodeEntities (text) {
   var entities = [
     ['apos', '\''],
-    ['amp', '&'],
     ['lt', '<'],
     ['gt', '>'],
     ['#63', '\\?'],
-    ['#36', '\\$']
+    ['#36', '\\$'],
+    ['amp', '&']
   ]
 
   for (var i = 0, max = entities.length; i < max; ++i) {

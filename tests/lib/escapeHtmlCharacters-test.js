@@ -40,6 +40,13 @@ test("escapeHtmlCharacters should NOT escape & character if it's a part of an es
   t.is(actual, expected)
 })
 
+test("escapeHtmlCharacters shoud escape & character if it's a part of an escaped character", t => {
+  const input = 'Do escape &amp; or &quot; but do escape &'
+  const expected = 'Do escape &amp;amp; or &amp;quot; but do escape &amp;'
+  const actual = escapeHtmlCharacters(input, {skipCodeBlock: false})
+  t.is(actual, expected)
+})
+
 test('escapeHtmlCharacters should skip char if in code block', t => {
   const input = `
 \`\`\`

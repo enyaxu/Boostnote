@@ -459,7 +459,7 @@ export default class MarkdownPreview extends React.Component {
       if (content === '\`\`\`') {
         inCodeTag = !inCodeTag
       } else if (inCodeTag) {
-        content = escapeHtmlCharacters(content)
+        content = escapeHtmlCharacters(content, {skipCodeBlock: true})
       }
       result += content
     }
